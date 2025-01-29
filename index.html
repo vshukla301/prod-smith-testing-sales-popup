@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smith and Testing Sales popup</title>
+	<!--Include below script in Head tag.-->
+            <link rel="stylesheet" href="https://popup.conciergeservices.ai/style.css" />
+            <script src="https://popup.conciergeservices.ai/aiconcierge.js"></script>
+              <script>
+                if (window.Assistant) {
+                  let assistant = new Assistant({
+                    target: "target-chat-id",
+                    apiKey: "b4b3eda6-b3a7-4947-935a-5b0a1c2f7b8c",
+                    productId: "random-id",
+                    chatBotType: "SalesConcierge"
+                  });
+                   window.onload = function() {assistant.init();}
+                }
+                if (window.dispatcher) {
+                  dispatcher.on("bot-ready", (e) => {
+                    console.log(e.detail);
+                  });
+                }
+              </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to popup Smith and Testing</h1>
+        <p>This is a popup Smith and Testing to validate chat bot functionality</p>
+    </header>
+
+    <section>
+        <h2>About the Site</h2>
+        <p>This Site is to test the Smith and Testing popup Functionality</p>
+        <img src="sample_image.jpg" alt="Sample Image" width="400" />
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Smith and Testing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
